@@ -1,0 +1,83 @@
+Tilgin AB HG2381
+
+IEEE 802.11n, 2.4GHz
+MIMO 2x2, two spatial streams 
+300 Mbps link speed 
+4 SSID
+Any-client beamforming
+
+
+IEEE 802.11ac (5GHz)
+MIMO 3x3, three spatial streams
+1300 Mbps link speed - direct link technology
+4 SSID
+Supported 802.11ac options:
+256 QAM, STBC, LDPC, MRC, DFS
+
+
+Chips: 
+Lantiq 4389 EL
+PXB v2.1
+720
+GRX300 Series
+7G50358E0
+ H1530
+
+WITH: 
+Winbond W971GG6SB-2S
+65104M000032
+607WUA TWN
+
+1G bits DDR2 SDRAM (1.8v)
+http://www.winbond.com/hq/product/specialty-dram/ddr2-sdram/?__locale=en&partNo=W971GG6SB
+
+
+Chips (2.4GHz):
+Lantiq PSB 82312 M
+v1.2
+XWAY tm WRX312
+TP3PY47C01 
+	H1543
+
+Fully integrated 11n 2x2 RF/PA chip
+
+
+Chips (5GHz): 
+QCA9880-BR4A
+FNSW920.U9
+1609
+CHINA
+
+
+
+Chipset: QCA9880 
+Interface: PCIe
+PHY: abgn+ac
+MIMO: 3x3:3	
+Ref design: QCA9880-BR4A v2
+
+
+With:
+
+Winbond
+W29N01GVS1AA
+555373000012
+611W
+
+1G-BIT 3.3V
+NAND FLASH MEMORY 
+http://www.winbond.com/resource-files/w29n01gv_revg.pdf?__locale=en
+http://www.winbond.com/resource-files/an0000012%20codestoragememoryprogrammingsupport%20guide%20v3.0%2004282017.pdf?__locale=en
+
+
+With (gigE)
+2x MNG G4802CG / 1617K
+
+
+With (gigE)
+Mnova MS0860 transformer
+/ 1611 B
+
+With: (POTS)
+S613NN01
+SLL98
