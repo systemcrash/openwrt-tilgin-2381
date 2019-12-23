@@ -1,1 +1,2 @@
-$1$q15RrcVp$8S2kplj9i7e3NfEJ3MS.Z/
+hash: $1$q15RrcVp$8S2kplj9i7e3NfEJ3MS.Z/
+pass: amazon
