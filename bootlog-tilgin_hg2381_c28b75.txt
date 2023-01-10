@@ -1,0 +1,930 @@
+ROM VER: 1.0.0
+CFG 06
+NAND
+
+ROM VER: 1.0.0
+CFG 06
+NAND
+
+DDR autotuning Rev 1.0
+DDR size from 0xa0000000 - 0xa3ffffff
+DDR check ok... start booting...
+
+
+
+Tilgin UBI HG228x/238x U-Boot 2010.06-LANTIQ-v-2.3.10 (Mar 09 2015 - 22:07:17) 02_07_00_42
+
+CLOCK CPU 720M RAM 360M
+16 Bit RAM
+DRAM:  128 MiB
+NAND:  ONFI flash detected
+ONFI param page 0 valid
+NAND device: Manufacturer ID: 0xef, Chip ID: 0xf1 (Unknown W29N01GV)
+128 MiB
+Creating 1 MTD partitions on "nand0":
+0x000000000000-0x000000080000 : "U-Boot"
+Creating 1 MTD partitions on "nand0":
+0x000000080000-0x000008000000 : "ubi"
+UBI: attaching mtd2 to ubi0
+UBI: physical eraseblock size:   131072 bytes (128 KiB)
+UBI: logical eraseblock size:    129024 bytes
+UBI: smallest flash I/O unit:    2048
+UBI: sub-page size:              512
+UBI: VID header offset:          512 (aligned 512)
+UBI: data offset:                2048
+UBI: max. sequence number:       1443
+UBI: attached mtd2 to ubi0
+UBI: MTD device name:            "ubi"
+UBI: MTD device size:            127 MiB
+UBI: number of good PEBs:        1020
+UBI: number of bad PEBs:         0
+UBI: number of corrupted PEBs:   0
+UBI: max. allowed volumes:       128
+UBI: wear-leveling threshold:    256
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     10
+UBI: available PEBs:             848
+UBI: total number of reserved PEBs: 172
+UBI: number of PEBs reserved for bad PEB handling: 10
+UBI: max/mean erase counter: 257/2
+UBI: image sequence number:  1377090127
+Volume Environment (ID 4) found at slot 4
+Read 7936 bytes from volume 4 to 86c332a8(buf address)
+In:    serial
+Out:   serial
+Err:   serial
+Board reset caused by unknown (3c08a060).
+
+Net:   internal phy using 25Mhz clock
+Internal phy firmware version: 0x8434
+PHY version 8435
+ar10 Switch
+
+Type "run flash_flash" to start the Linux kernel
+
+Hit any key to stop autoboot:  1  0 
+
+No private boot packet is detected
+Volume kernel (ID 6) found at slot 6
+Read 0 bytes from volume 6 to 80500000(buf address)
+Read [1407723] bytes
+## Booting kernel from Legacy Image at 80500000 ...
+   Image Name:   MIPS Linux-2.6.32
+   Created:      2015-03-09  19:59:38 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    1407659 Bytes = 1.3 MiB
+   Load Address: 80002000
+   Entry Point:  80006150
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+Lantiq xDSL CPE GRX390
+mips_hpt_frequency = 360000000, counter_resolution = 2
+Linux version 2.6.32.42 (lajo@tilgin-00144-desktop) (gcc version 4.3.3 (GCC) ) #1 Mon Mar 9 20:59:15 CET 2015
+printk buffer from the previous boot:
+
+-----------------------------------
+00 00 00 
+[4294747466] mtlk0(mtlk_mbss_send_vap_activate:3210): CID-0000: mtlk_txmm_msg_send, MsgId = 0x453, ESSID = bahnhof2_4Ghz-159273[4294747646] mtlk0(mtlk_mbss_init:3453): CID-0000: mtlk_mbss_send_vap_activate returned successfully
+00 00  00 00 00 00 00 00 00 00 
+0040:  00 00 00 00 00 00 00 00  00 00 00 00 00 
+-----------------------------------
+phym = 08000000, mem = 07f00000, max_pfn = 00007f00
+Reserving memory for CP1 @0xa7f00000, size 0x00100000
+CPU revision is: 00019556 (MIPS 34Kc)
+Determined physical RAM map:
+AR10 mem final size = 3207168
+AR10 mem final size = 5177344
+AR10 mem final size = 107999232
+User-defined physical RAM map:
+ memory: 0030f000 @ 00000000 (usable)
+ memory: 004f0000 @ 00410000 (usable)
+ memory: 066ff000 @ 00a01000 (usable)
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00007100
+Movable zone start PFN for each node
+early_node_map[3] active PFN ranges
+    0: 0x00000000 -> 0x0000030f
+    0: 0x00000410 -> 0x00000900
+    0: 0x00000a01 -> 0x00007100
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 28188
+Kernel command line: mtdparts=ifx_nand:0x80000@0x0(U-Boot),-@0x80000(ubi) ubi.mtd=ubi root=mtd:rootfs ip=192.168.1.1:192.168.1.3::::eth0:on console=ttyS0,115200 ethaddr=00:02:61:C2:8B:74 ID_ProductID=HG2381 ID_MAC_0=00:02:61:C2:8B:74 ID_MAC_1=00:02:61:C2:8B:75 ID_MAC_2=00:02:61:C2:8B:76 ID_MAC_3=00:02:61:C2:8B:77 ID_MAC_4=00:02:61:C2:8B:78 ID_MAC_5=00:02:61:C2:8B:79 ID_MAC_6=00:02:61:C2:8B:7A ID_MAC_7=00:02:61:C2:8B:7B panic=1 UBOOT_VERSION="02_07_00_42" UBOOT_DATETIME="Mar 9 2015 - 22:07:37" RESET_CAUSE=unknown boot_cond=0 vpe1_load_addr=0x87f00000 vpe1_mem=1M wlanm=126 mem=0x40f000 mem=0x5f0000@0x410000 mem=0x67ff000@0xa01000
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+Writing ErrCtl register=00000000
+Readback ErrCtl register=00000000
+Memory: 108724k/113656k available (3027k kernel code, 4768k reserved, 1115k data, 188k init, 0k highmem)
+Hierarchical RCU implementation.
+NR_IRQS:185
+Lantiq ICU driver, version 3.0.1, (c) 2001-2013 Lantiq Deutschland GmbH
+console [ttyS0] enabled
+Calibrating delay loop... 478.41 BogoMIPS (lpj=2392064)
+Security Framework initialized
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+
+
+  |      |
+ ~|~~~ | | ,~~~~. | ,~~~~.
+  |    | | |    | | |    |
+  `~~` ' ' `~~~ ; ' '    '
+            ~~~~
+ Home gateway product HG2381
+
+
+Registered platform device tilgin-hg-ltq-nand:-1
+Registered platform device tilgin-hg-ltq-gphy:-1
+Registered platform device ar10-ssi0:-1
+Registered platform device ar10-mdio:-1
+Registered platform device danube-ledc-gpo:-1
+Registered platform device on-off-sw-gpio:0
+Registered platform device on-off-sw-gpio:2
+Registered platform device on-off-sw-gpio:3
+Registered platform device on-off-sw-gpio:4
+Registered platform device ar10-usif:-1
+Registered platform device on-off-sw-gpio:1
+Registered platform device cosic-catiq:-1
+!!!!!!! WAVE400 system registeration on AHB 
+MTLK_MEM_BAR0_START is 7e00000
+MTLK_MEM_BAR0_END is 7efffff
+MTLK_MEM_BAR1_START is 1a000000
+MTLK_MEM_BAR1_END is 1a7fffff
+MTLK_WIRELESS_IRQ_IN_INDEX is 18
+Lantiq Danube/Twinpass/Vinax GPIO
+danube-gpio danube-gpio.0: gpio_base=0
+danube-gpio danube-gpio.1: gpio_base=16
+danube-gpio danube-gpio.2: gpio_base=32
+Lantiq Danube/Twinpass/Vinax LED controller GPO
+danube-ledc-gpo danube-ledc-gpo: gpio_base=64
+On/off switch class
+GPIO-based on/off switch with auto-off
+Registered on/off switch device: slic_reset
+Registered on/off switch device: usb_power
+Registered on/off switch device: pcie0_rst
+Registered on/off switch device: pcie2_rst
+Registered on/off switch device: cosic_reset
+ifx_pcie_wait_phy_link_up port 0 timeout
+ifx_pcie_wait_phy_link_up port 0 timeout
+ifx_pcie_wait_phy_link_up port 0 timeout
+ifx_pcie_wait_phy_link_up port 0 timeout
+ifx_pcie_wait_phy_link_up port 0 timeout
+pcie_rc_initialize port 0 link up failed!!!!!
+on/off switch 'pcie1_rst' not found
+Lantiq PCIe Root Complex driver, version 2.0.0, (c) 2001-2013 Lantiq Deutschland GmbH
+bio: create slab <bio-0> at 0
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+ifx_pcie_rc_class_early_fixup port 2: fixed pcie host bridge to pci-pci bridge
+pci 0000:00:00.0: PME# supported from D0 D3hot
+pci 0000:00:00.0: PME# disabled
+pci 0000:01:00.0: PME# supported from D0 D1 D3hot
+pci 0000:01:00.0: PME# disabled
+pci 0000:00:00.0: PCI bridge, secondary bus 0000:01
+pci 0000:00:00.0:   IO window: disabled
+pci 0000:00:00.0:   MEM window: 0x1b000000-0x1b1fffff
+pci 0000:00:00.0:   PREFETCH window: 0x1b200000-0x1b2fffff
+NET: Registered protocol family 8
+NET: Registered protocol family 20
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 4096 bind 4096)
+TCP reno registered
+NET: Registered protocol family 1
+gptu: totally 6 16-bit timers/counters
+gptu: misc_register on minor 63
+gptu: succeeded to request irq 118
+gptu: succeeded to request irq 119
+gptu: succeeded to request irq 120
+gptu: succeeded to request irq 121
+gptu: succeeded to request irq 122
+gptu: succeeded to request irq 123
+IFX DMA driver, version ifxmips_dma_core.c:v1.1.5 
+,(c)2009 Infineon Technologies AG
+Lantiq CGU driver, version 1.1.38, (c) 2001-2013 Lantiq Deutschland GmbH
+vpe1_mem = 100000
+Wired TLB entries for Linux read_c0_wired() = 0
+Squashfs 2.2-r2 (released 2005/09/08) (C) 2002-2005 Phillip Lougher
+msgmni has been set to 212
+alg: No test for stdrng (krng)
+Infineon Technologies DEU driver version 2.0.0 
+Lantiq Technologies DEU Driver version 2.0.0
+alg: cipher: setkey failed on test 5 for ifxdeu-des: flags=100
+alg: skcipher: setkey failed on test 5 for ifxdeu-ecb(des): flags=100
+alg: cipher: setkey failed on test 1 for ifxdeu-des3_ede: flags=200000
+IFX DEU DES initialized (multiblock).
+Lantiq Technologies DEU Driver version 2.0.0
+IFX DEU AES initialized (multiblock).
+Infineon Technologies DEU driver version 2.0.0 
+IFX DEU ARC4 initialized (multiblock).
+Infineon Technologies DEU driver version 2.0.0 
+IFX DEU SHA1 initialized.
+Infineon Technologies DEU driver version 2.0.0 
+IFX DEU MD5 initialized.
+Infineon Technologies DEU driver version 2.0.0 
+Key length exceeds maximum key length
+alg: hash: setkey failed on test 5 for ifxdeu-sha1_hmac: ret=22
+IFX DEU SHA1_HMAC initialized.
+Infineon Technologies DEU driver version 2.0.0 
+alg: hash: setkey failed on test 5 for ifxdeu-md5_hmac: ret=22
+IFX DEU MD5_HMAC initialized.
+DEU driver initialization complete!
+io scheduler noop registered (default)
+I/O Memory GPIO Emulation
+ifx_pmu_init: Major 253
+Lantiq PMU driver, version 1.2.6, (c) 2001-2013 Lantiq Deutschland GmbH
+Lantiq GPIO driver, version 1.3.2, (c) 2001-2013 Lantiq Deutschland GmbH
+Infineon Technologies RCU driver version 1.1.1 
+tilgin-hg-ltq-gphy tilgin-hg-ltq-gphy: Lantiq GPHY kthread created
+tilgin-hg-ltq-gphy tilgin-hg-ltq-gphy: gpio_base=96
+Tilgin initialization is OK
+ttyS0 at MMIO 0xbe100c00 (irq = 105) is a IFX_ASC
+Lantiq ASC (UART) driver, version 1.0.14, (c) 2001-2013 Lantiq Deutschland GmbH
+loop: module loaded
+slram: not enough parameters.
+Tilgin HG Lantiq NAND driver
+ifx_nand_init
+Probe for NAND flash...
+Checking if ONFI complient
+ONFI param page 0 valid
+ONFI flash detected, val i = 0
+writesize: 2048, erasesize: 131072, chipsize: 134217728
+NAND device: Manufacturer ID: 0xef, Chip ID: 0xf1 (Unknown NAND 128MiB 3,3V 8-bit)
+Scanning device for bad blocks
+2 cmdlinepart partitions found on MTD device ifx_nand
+Creating 2 MTD partitions on "ifx_nand":
+0x000000000000-0x000000080000 : "U-Boot"
+0x000000080000-0x000008000000 : "ubi"
+UBI: attaching mtd1 to ubi0
+UBI: physical eraseblock size:   131072 bytes (128 KiB)
+UBI: logical eraseblock size:    129024 bytes
+UBI: smallest flash I/O unit:    2048
+UBI: sub-page size:              512
+UBI: VID header offset:          512 (aligned 512)
+UBI: data offset:                2048
+UBI: max. sequence number:       1443
+UBI: attached mtd1 to ubi0
+UBI: MTD device name:            "ubi"
+UBI: MTD device size:            127 MiB
+UBI: number of good PEBs:        1020
+UBI: number of bad PEBs:         0
+UBI: number of corrupted PEBs:   0
+UBI: max. allowed volumes:       128
+UBI: wear-leveling threshold:    256
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     10
+UBI: available PEBs:             848
+UBI: total number of reserved PEBs: 172
+UBI: number of PEBs reserved for bad PEB handling: 10
+UBI: max/mean erase counter: 257/2
+UBI: image sequence number:  1377090127
+UBI: background thread "ubi_bgt0d" started, PID 238
+Lantiq SSC driver, version 2.4.2, (c) 2001-2013 Lantiq Deutschland GmbH
+Lantiq USIF-SPI driver, version 1.3.2, (c) 2001-2013 Lantiq Deutschland GmbH
+PPP generic driver version 2.4.2
+NET: Registered protocol family 24
+PPPoL2TP kernel driver, V1.0
+Lantiq PCIe EP  driver, version 1.0.1, (c) 2001-2013 Lantiq Deutschland GmbH
+IFX SWITCH API, Version 1.2.6
+SWAPI: Registered character device [switch_api] with major no [81]
+Switch API: PCE MicroCode loaded !!
+GPHY FW load for ARX300 !!
+Lantiq GPHY #0 in GE mode
+Lantiq GPHY #1 in GE mode
+Lantiq GPHY #2 in GE mode
+Lantiq GPHY #3 in GE mode
+IFX GPHY driver version ifxmips_xrx_gphy: V1.1.1 - Firmware: GPHY0 GE 8435, GPHY1 GE 8435, GPHY2 GE 8435, GPHY3 GE 8435
+res = 86d2b480
+Initializing USB Mass Storage driver...
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+input: input-gpio-polled as /devices/platform/input-gpio-polled.0/input/input0
+Lantiq Danube/Twinpass/Vinax Watchdog
+danube-wdt danube-wdt: Starting Watchdog Timer
+Start watchdog with maximum timeout 44 seconds
+Registered led device: 1:red
+Registered led device: 3:green
+Registered led device: 3:red
+Registered led device: 4:green
+Registered led device: 4:red
+Registered led device: 5:green
+Registered led device: 5:red
+Registered led device: 6:red
+Registered led device: 6:green
+Registered led device: 7:red
+Registered led device: 7:green
+Registered led device: 8:red
+Registered led device: 8:green
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (1701 buckets, 6804 max)
+ctnetlink v0.93: registering with nfnetlink.
+nf_ct_ipsec_ike: registering helper for pf: 2 port: 500
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+IPv6 over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+Bridge firewalling registered
+Ebtables v2.0 registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+tilgin-hg-ltq-gphy tilgin-hg-ltq-gphy: switch port #1 PHY ID is 0x1
+tilgin-hg-ltq-gphy tilgin-hg-ltq-gphy: switch port #2 PHY ID is 0x2
+tilgin-hg-ltq-gphy tilgin-hg-ltq-gphy: switch port #3 PHY ID is 0x3
+tilgin-hg-ltq-gphy tilgin-hg-ltq-gphy: switch port #4 PHY ID is 0x4
+tilgin-hg-ltq-gphy tilgin-hg-ltq-gphy: switch port #5 PHY ID is 0x5
+Firmware version for port 1 is 435 - may be it's timeto enable power saving?
+Firmware version for port 2 is 435 - may be it's timeto enable power saving?
+Firmware version for port 3 is 435 - may be it's timeto enable power saving?
+Firmware version for port 4 is 435 - may be it's timeto enable power saving?
+Firmware version for port 5 is 435 - may be it's timeto enable power saving?
+Use /dev/mtdblock8 instead of mtd:rootfs
+VFS: Mounted root (squashfs filesystem) readonly on device 31:8.
+Freeing unused kernel memory: 188k freed
+
+init started: BusyBox v1.21.1 (2015-03-09 21:04:25 CET)
+
+starting pid 298, tty '': '/etc/init.d/rcS'
+real	0m 0.02s
+user	0m 0.00s
+sys	0m 0.02s
+crm-cleanup: running...
+iptables v1.4.6: can't initialize iptables table `mangle': Table does not exist (do you need to insmod?)
+Perhaps iptables or your kernel needs to be upgraded.
+iptables v1.4.6: can't initialize iptables table `mangle': Table does not exist (do you need to insmod?)
+Perhaps iptables or your kernel needs to be upgraded.
+grep: /proc/584/cmdline: No such file or directory
+grep: /proc/600/cmdline: No such file or directory
+All modules unloaded
+crm-cleanup: done
+pmem-name2path: Failed to map MTD device 'Environment2'
+pmem-read.squashfs: Restoring /var/log from Log (/dev/mtd/4)
+cat: can't open '/tmp/pmem.31cNmm/VERSION': No such file or directory
+pmem-read.squashfs: Failed to read Config-A version file
+pmem-name2path: Failed to map MTD device 'Config-B'
+pmem-read.squashfs: Restoring /var/etc from Config-A (/dev/mtd/3)
+pmem-name2path: Failed to map MTD device 'Environment2'
+pmem-name2path: Failed to map MTD device 'rootfs-ram'
+pmem-name2path: Failed to map MTD device 'appfs-ram'
+pmem-read.squashfs: Restoring /var/miscA from Misc-A (/dev/mtd/6)
+pmem-name2path: Failed to map MTD device 'Misc-B'
+pmem-name2path: Failed to map MTD device 'Config-B'
+Jan  1 00:00:18 C Dispatcher: Init module logger	OK
+
+
+RootFS version ESx000-02_07_00_42
+
+
+BusyBox v1.21.1 (2015-03-09 21:04:25 CET) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+# Loading D5 (MII0/1) driver ...... 
+CHIPID: 1, chipid address: 0xbf107344
+Succeeded!
+PPE datapath driver info:
+  Version ID: 128.3.3.1.2.14.1
+  Family    : AR10
+  DR Type   : Normal Data Path | Indirect-Fast Path
+  Interface : MII0 | MII1
+  Mode      : Routing
+  Release   : 2.14.1
+PPE firmware info:
+  Version ID: 10.5.2.14.3
+  Family    : GRX390
+  FW Package: D5
+  Release   : 2.14.3
+PPE firmware feature:
+  Packet Acceleration             Support
+  IPv4                            Support
+  IPv6                            Support
+  6RD                             Support
+  DS-Lite                         Support
+PPA API --- init successfully
+ifx_ppa_init - init succeeded
+Trying to start watchdog with timeout 10 seconds
+umount: can't umount /usr/share/webui: Invalid argument
+efb: module license 'unspecified' taints kernel.
+Disabling lock debugging due to kernel taint
+IFXUSB: ifxusb_hcd: version 3.2 B140220
+IFXUSB:    OPTION: __IS_AR10__
+IFXUSB:    OPTION: __UEIP__
+IFXUSB:    OPTION: __PHY_LONG_PREEMP__
+IFXUSB:    OPTION: __UNALIGNED_BUF_ADJ__
+IFXUSB:    OPTION: __DEBUG__
+IFXUSB:    OPTION: __ENABLE_DUMP__
+IFXUSB:    OPTION: __NEW_COC__
+IFXUSB:    OPTION: __IS_HOST__
+IFXUSB:            __IS_DUAL__
+IFXUSB:            __DYN_SOF_INTR__
+IFXUSB:            __UEIP__
+IFXUSB:            __DO_OC_INT__
+IFXUSB:            __INTRNAKRETRY__
+IFXUSB:            __INTRINCRETRY__
+IFXUSB: USB core #0 soft-reset
+IFXUSB: USB core #0 soft-reset
+ifxusb_hcd ifxusb_hcd: IFX USB Controller
+ifxusb_hcd ifxusb_hcd: new USB bus registered, assigned bus number 1
+ifxusb_hcd ifxusb_hcd: irq 54, io mem 0xbe101000
+IFXUSB: Init: Power Port (0)
+on/off switch 'usb1_power' not found
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+on/off switch 'usb1_power' not found
+IFXUSB: USB core #1 soft-reset
+IFXUSB: USB core #1 soft-reset
+ifxusb_hcd ifxusb_hcd: IFX USB Controller
+ifxusb_hcd ifxusb_hcd: new USB bus registered, assigned bus number 2
+ifxusb_hcd ifxusb_hcd: irq 83, io mem 0xbe106000
+IFXUSB: Init: Power Port (0)
+on/off switch 'usb2_power' not found
+usb usb2: configuration #1 chosen from 1 choice
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+on/off switch 'usb2_power' not found
+[4294696416] mtlk0(mtlk_cdev_init:355): Max nodex set to 1048575
+[4294697566] mtlk0(__mtlk_print_endianess:4915): The system is Big endian (0xbeadfeed, 0xedfeadbe)
+[4294697576] mtlk<3>(_ahb_irq_get:429): Found device IRQ: 18
+[4294697586] mtlk0(_mtlk_df_user_alloc_devname:8455): NDEV Name pattern: wlan%d
+[4294697586] mtlk0(mtlk_core_pdb_fast_handles_open:44): Open Hot-path parameters
+[4294697596] mtlk<4>(_mtlk_mmb_cleanup_reset_mac:3245): FW CPU reset is done
+[MTLKD] BBCPU Reg: offs=0x01c0 (ba2f01c0) val=0xfff007e0 (offset_mb=126)
+[MTLKD] Enabling interrupt (bf880208)
+[MTLKD] Interrupt enabled
+[MTLKD] ChipID: 0x07D0
+[MTLKD] e-fuse: num 1, address 0xbf1073b0, word: 0x00000000, value: 0x000
+[MTLKD] e-fuse: num 2, address 0xbf1073b4, word: 0x00000000, value: 0x000
+[MTLKD] e-fuse: num 3, address 0xbf1073b8, word: 0x00000000, value: 0x000
+[MTLKD] e-fuse: num 4, address 0xbf1073bc, word: 0x00000000, value: 0x000
+[MTLKD] e-fuse: num 5, address 0xbf1073c0, word: 0x00000000, value: 0x000
+[MTLKD] e-fuse: num 6, address 0xbf1073c4, word: 0x00000000, value: 0x000
+mtlk mtlk.0: firmware: requesting cal_wlan0.bin
+[4294697796] mtlk0(mtlk_mmb_drv_get_cpu_freq:604): FPI bus frequency: 360 MHz
+mtlk mtlk.0: firmware: requesting ap_upper_ar10.bin
+[4294698086] mtlk0(get_firmware_version:1161): CID-0000: ap_upper_ar10.bin: @@@ VERSION INFO @@@ version number: 3.4.2.40.05_NoPsTxCancel_2_r4540 MIPS:  Single CPU(TMC AGG AP) interface: PCI  phy type: real phy on Dec 31 2014 at 14:19:47@@@ END @@@
+
+[4294698156] mtlk<4>(_mtlk_mmb_send_hw_dep_cfg:2443): AFE value: 0x20056012
+[4294698186] mtlk0(mtlk_eeprom_check_ee_data:1353): Options mask is 0x00
+[4294698186] mtlk0(load_default_hw_table:2119): HW configuration is 2X2
+[4294698206] mtlk0(_mtlk_df_user_ppa_register:616): PPA device function is registered (id=3)
+[4294698456] mtlk0(_mtlk_core_mbss_add_vap:7757): CID-0000: Got PRM_ID_VAP_ADD
+[4294698456] mtlk0(_mtlk_df_user_alloc_devname:8455): NDEV Name pattern: wlan0.0
+[4294698466] mtlk0(mtlk_core_pdb_fast_handles_open:44): Open Hot-path parameters
+[4294698486] mtlk0(_mtlk_core_mbss_add_vap:7775): CID-0000: VAP#1 added
+[4294698506] mtlk0(_mtlk_core_mbss_add_vap:7757): CID-0000: Got PRM_ID_VAP_ADD
+[4294698516] mtlk0(_mtlk_df_user_alloc_devname:8455): NDEV Name pattern: wlan0.1
+[4294698526] mtlk0(mtlk_core_pdb_fast_handles_open:44): Open Hot-path parameters
+[4294698546] mtlk0(_mtlk_core_mbss_add_vap:7775): CID-0000: VAP#2 added
+[4294698576] mtlk0(_mtlk_core_mbss_add_vap:7757): CID-0000: Got PRM_ID_VAP_ADD
+[4294698576] mtlk0(_mtlk_df_user_alloc_devname:8455): NDEV Name pattern: wlan0.2
+[4294698586] mtlk0(mtlk_core_pdb_fast_handles_open:44): Open Hot-path parameters
+[4294698646] mtlk0(_mtlk_core_mbss_add_vap:7775): CID-0000: VAP#3 added
+usbcore: registered new interface driver cdc_acm
+cdc_acm: v0.26:USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usbserial
+usbserial: USB Serial Driver core
+USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver option
+option: v0.7.2:USB Driver for GSM modems
+usbcore: registered new interface driver usblp
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver rndis_host
+usbcore: registered new interface driver cdc_ncm
+DTLK RX base :0xaf200000
+DLRX driver init successfully!
+DLRX driver version: 0x14
+Hello, dlrx_fw
+=============
+DRE_Version is 0x142, DRE_Feature is 0x11ac0100 
+ath_hal: 0.9.17.1 (AR5416, AR9380, REGOPS_FUNC, WRITE_EEPROM, TX_DATA_SWAP, RX_DATA_SWAP, 11D)
+ath_rate_atheros: Copyright (c) 2001-2005 Atheros Communications, Inc, All Rights Reserved
+ath_dfs: Version 2.0.0
+Copyright (c) 2005-2006 Atheros Communications, Inc. All Rights Reserved
+ath_dev: Copyright (c) 2001-2007 Atheros Communications, Inc, All Rights Reserved
+ath_pci: 10.2.85 (Atheros/multi-bss)
+ath_pci_probe
+PCI device id is 003c :003c
+PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+ath_pci 0000:01:00.0: ath DEBUG: sc=0x85431c00
+
+ ol_ath_pci_configure : num_desired MSI set to 0
+
+ Using PCI Legacy Interrupt
+__ol_ath_attach: ath_attach TODO
+__ol_ath_attach: dev name wifi0
+ol_ath_attach() BMI inited.
+ol_ath_attach() BMI Get Target Info.
+ol_ath_attach() TARGET TYPE: 7 Vers 0x4100016c
+NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+ol_ath_attach() configure Target .
+Reading Flash for Calibraton data from 0x5000 and partition name is caldata
+TILGIN ol_transfer_bin_file OS_NAND_FLASH_READ at 20480 (2116) OK
+qc98xx_verify_checksum: flash checksum passed: 0xe7e1
+ol_transfer_bin_file 1804: Download Flash data len 2116
+ol_transfer_bin_file 1748: Download Firmware data len 218164
+ol_ath_attach() Download FW. 
+ol_ath_attach() HT Create .
+ol_ath_attach() HIF Claim.
+ol_ath_attach() BMI Done. 
+ol_ath_attach() WMI attached. wmi_handle 84f20000 
++HWT
+CE_recv_buf_enqueue 625 Populate last entry 512 for CE 5
+CE_recv_buf_enqueue 634 CE 5 wi 511 dest_ptr 0x4fa3040 nbytes 0 recv_ctxt 0x84fa0480
+-HWT
+HTC Service:0x0300 ep:1 TX flow control disabled
+CE_pkt_dl_len_set CE 4 Pkt download length 64
+TXRX: Created pdev 85431400
+HTC Service:0x0100 ep:2 TX flow control disabled
+wmi_service_ready_event_rx:  WMI UNIFIED SERVICE READY event 
+num_rf_chain : 00000003
+ht_cap_info: : 0000085b
+vht_cap_info : 338001b2
+vht_supp_mcs : 0000ffea
+LARGE_AP enabled. num_peers 144, num_vdevs 16, num_tids 256
+idx 0 req 1  num_units 0 num_unit_info 2 unit size 408 actual units 145 
+chunk 0 len 59160 requested ,ptr  0x4dc0000 
+FIRMWARE:P 145 V 16 T 443
+ 
+FIRMWARE:_wlan_rtt_enable 
+wmi_ready_event_rx:  WMI UNIFIED READY event 
+ol_ath_connect_htc() WMI is ready
+ol_ath_set_host_app_area TODO
+target uses HTT version 2.1; host uses 2.1
+ol_ath_attach() connect HTC. 
+ol_regdmn_start: reg-domain param: regdmn=0, countryName=, wModeSelect=FFFFFFFF, netBand=FFFFFFFF, extendedChanMode=0.
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2) flags 0x2150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4) flags 0xa0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x8) flags 0xc0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x20) flags 0xd0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x40) flags 0x150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x800) flags 0x10080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2000) flags 0x20080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4000) flags 0x40080
+Add VHT80 channel: 5210
+Add VHT80 channel: 5290
+Add VHT80 channel: 5530
+Add VHT80 channel: 5610
+Add VHT80 channel: 5690
+Add VHT80 channel: 5775
+Skipping VHT80 channel 5825
+ol_ath_phyerr_attach: called
+OL Resmgr Init-ed
+ol_if_dfs_setup: called 
+ol_if_dfs_attach: called; ptr=84db9974, radar_info=84ca3c08
+ol_ath_rtt_meas_report_attach: called
+ol_ath_attach() UMAC attach . 
+ol_if_dfs_configure: called
+ol_if_dfs_configure: FCC domain
+ol_if_dfs_disable: called
+ol_ath_attach: Calling ol_if_dfs_configure
+__ol_ath_attach: init tx/rx TODO
+__ol_ath_attach: hard_header_len reservation 58
+Initializing Pktlogs for 11ac
+ath_ioctl: SIOC80211IFCREATE CALLED
+wmi_unified_vdev_create_send: ID = 0 VAP Addr = 00:02:61:c2:8b:79:
+TXRX: Created vdev 8426fd80 (00:02:61:c2:8b:79)
+Setting vdev param = 26, value = 147
+Setting vdev param = 27, value = 295
+Setting vdev param = 28, value = 300
+TXRX: ol_txrx_peer_find_add_id: peer 85334000 ID 229 vid 0 mac 00:02:61:c2:8b:79
+TXRX: ol_txrx_peer_find_add_id: peer 85334000 ID 276 vid 0 mac 00:02:61:c2:8b:79
+IFXOS, Version 1.5.16 (c) Copyright 2009, Lantiq Deutschland GmbH
+ifx_ppa_init - init succeeded
+watchdog: disabled
+Trying to start watchdog with timeout 10 seconds
+[4294720106] mtlk0(_mtlk_df_user_ppa_unregister:641): PPA device function is unregistered (id=3)
+[4294720116] mtlk0(_mtlk_df_user_ppa_register:616): PPA device function is registered (id=3)
+isCountryCodeValid: EEPROM regdomain 0x0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2) flags 0x2150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4) flags 0xa0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x8) flags 0xc0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x20) flags 0xd0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x40) flags 0x150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x800) flags 0x10080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2000) flags 0x20080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4000) flags 0x40080
+Add VHT80 channel: 5210
+Add VHT80 channel: 5290
+Add VHT80 channel: 5530
+Add VHT80 channel: 5610
+Skipping VHT80 channel 5660
+Skipping VHT80 channel 5680
+Skipping VHT80 channel 5700
+OL vap_stop +
+wmi_unified_vdev_stop_send 
+OL vap_stop -
+STOPPED EVENT for vap 0 
+OL vap_stop +
+wmi_unified_vdev_stop_send 
+OL vap_stop -
+STOPPED EVENT for vap 0 
+TXRX: ol_rx_peer_unmap_handler: peer 85334000 with ID 229 to be unmapped.
+TXRX: ol_rx_peer_unmap_handler: peer 85334000 with ID 276 to be unmapped.
+TXRX: ol_txrx_vdev_detach: deleting vdev object 8426fd80 (00:02:61:c2:8b:79)
+Too long sleep: 5 vs 2
+ath_ioctl: SIOC80211IFCREATE CALLED
+wmi_unified_vdev_create_send: ID = 0 VAP Addr = 00:02:61:c2:8b:79:
+TXRX: Created vdev 854a6080 (00:02:61:c2:8b:79)
+Setting vdev param = 26, value = 147
+Setting vdev param = 27, value = 295
+Setting vdev param = 28, value = 300
+TXRX: ol_txrx_peer_find_add_id: peer 84275000 ID 229 vid 0 mac 00:02:61:c2:8b:79
+TXRX: ol_txrx_peer_find_add_id: peer 84275000 ID 276 vid 0 mac 00:02:61:c2:8b:79
+Mem: 53744K used, 55332K free, 0K shrd, 5524K buff, 19464K cached
+CPU:  27% usr  63% sys   0% nic   0% idle   0% io   0% irq   9% sirq
+Load average: 2.35 0.57 0.19 5/50 3726
+  PID  PPID USER     STAT   VSZ %VSZ %CPU COMMAND
+  670   518 root     R    12196  11%  27% crm -t -f /var/log/crm.log
+ 1166     1 root     S     1864   2%   9% syslogd -O /var/log/crm.log -s 200
+ 3714  3713 root     R <   1864   2%   9% top -b -n 1
+ 2341   670 root     S     8040   7%   0% drvhlpr -p /tmp/drvhlpr0.conf -e 2
+ 3132   670 root     S <   3604   3%   0% watchdog --crm-timeout 180 --wdt-timeout 10
+ 3724  3723 root     S     1876   2%   0% {default.hotplug} /bin/sh /etc/hotplug.d/default/default.hotplug net
+ 2197  2192 root     S     1872   2%   0% {crm-hotplug} /bin/sh /usr/bin/crm-hotplug usb
+ 2236  2213 root     S     1872   2%   0% {crm-hotplug} /bin/sh /usr/bin/crm-hotplug usb
+ 1222   670 root     S     1868   2%   0% /bin/sh --login
+    1     0 root     S     1864   2%   0% init
+  518     1 root     S     1864   2%   0% {crm-keeper} /bin/sh /usr/bin/crm-keeper
+ 3713  3132 root     S <   1864   2%   0% /bin/sh -c top -b -n 1
+ 2213     6 root     S     1864   2%   0% {crm-hotplug} /bin/sh /usr/bin/crm-hotplug usb
+ 3723     6 root     S     1864   2%   0% {crm-hotplug} /bin/sh /usr/bin/crm-hotplug net
+ 2192     6 root     S     1864   2%   0% {crm-hotplug} /bin/sh /usr/bin/crm-hotplug usb
+ 1169     1 root     S     1856   2%   0% klogd
+ 3726  3724 root     R     1856   2%  OL vap_stop +
+ wmi_unified_vdev_stop_send 
+OL vap_stop -
+STOPPED EVENT for vap 0 
+0% env
+ 2210  2197 root     S     1556   1%   0% caction -u hotplug.usb /usb/host/update_led
+ 2253  2236 root     S     1556   1%   0% caction -u hotplug.usb /usb/host/updatSetting vdev param = 3, value = 200
+e_led
+ 2198  2192 root     S     1552   1%   0% clog -l ERROR
+ 2237  2213 root     S     1552   1%   0% clog -l ERROR
+ 3134   670 Setting vdev param = d, value = 2
+root     S     1452   1%   0% iptables --read-args-from 40
+ 3139   670 root     S     1452   1%   0% ip6tables --read-aSetting vdev param = 1e, value = 1
+rgs-from 41
+ 3590   670 nobody   S     1452   1%PPA REG DONE, if_id=5, dev_if_index = 11, os_unit=0 
+   0% dnsmasq -i * -a 0.0.0.0 --keep-in-foreground  
+ DES SSID SET=bahnhof5Ghz-159273 
+-OL vap_stop +
+wmi_unified_vdev_stop_send 
+OL vap_stop -
+STOPPED EVENT for vap 0 
+u nobody --cache=2048 -H /etc/dnrd/master --stop-dns-rebind --rebind-localhost-ok --conf-file=/tmp/dnsmasq.1_domains.conf
+  216     2 root     SW       0   0%   0% [mtdblockd]
+    5     2 root     SW       0   0%   0% [events/0]
+    6     2 root     SW       0   0%   0% [khelper]
+ 2325     2 root     DW       0   0%   0% [mtlk]
+  238     2 root     SW       0   0%   0% [ubi_bgt0d]
+  117     2 root     SW       0   0%   0% [kblockd/0]
+  115     2 root     SW       0   0%   0% [bdi-default]
+ 1221     2 root     SW       0   0%   0% [ipolldevd]
+  126     2 root     SW       0   0%   0% [khubd]
+  113     2 root     SW       0   0%   0% [sync_supers]
+ 2349     2 root     DW       0   0%   0% [mtlk]
+ 2358     2 root     RW       0   0%   0% [mtlk]
+  165     2 root     SW       0   0%   0% [crypto_ret]
+  155     2 root     SW       0   0%   0% [kswapd0]
+  156     2 root     SW       0   0%   0% [aio/0]
+  157     2 root     SW       0   0%   0% [crypto/0]
+ 2365     2 root     DW       0   0%   0% [mtlk]
+    2     0 root     SW       0   0%   0% [kthreadd]
+    3     2 root     SW       0   0%   0% [ksoftirqd/0]
+    4     2 root     SW       0   0%   0% [watchdog/0]
+  164     2 root     SW       0   0%   0% [crypto]
+    9     2 root     SW       0   0%   0% [async/mgr]
+
+OL vap_start +
+OL vap_start -
+ol_vdev_start_resp_ev
+ol_ath_vap_join: join operation is only for STA/IBSS mode
+Setting vdev param = 3, value = 200
+Notification to UMAC VAP layer
+FWLOG: [54393] WHAL_ERROR_RESET_CHANNF1 (  )
+device eth0 entered promiscuous mode
+device wlan0 entered promiscuous mode
+device wlan2 entered promiscuous mode
+wmi_unified_vdev_stop_send 
+STOPPED EVENT for vap 0 
+Tunnel link is UP
+udhcpd (v1.21.1) started
+CRM state '/voip/call/table' flags=0 saving...
+CRM state '/voip/call/table' flags=0 saving... done. Status=EOK Count=0
+CRM state '/' flags=0 saving...
+CRM state '/' flags=0 saving... done. Status=EOK Count=1166
+find: /sys/class/usb/lp*/device/uevent: No such file or directory
+find: /sys/class/tty/tty????/uevent: No such file or directory
+find: /sys/class/tty/wwan?/uevent: No such file or directory
+find: /sys/class/scsi_disk/*/uevent: No such file or directory
+Configuration file: /tmp/hostapd-wlan0.conf
+1970-01-01 00:01:03: (/space/build/ToT/factory/src/vood/ng/current/lighttpd/src/network.c.297) warning: please use server.use-ipv6 only for hostnames, not without server.bind / empty address; your config will break if the kernel default for IPV6_V6ONLY changes 
+1970-01-01 00:01:03: (/space/build/ToT/factory/src/vood/ng/current/lighttpd/src/network.c.297) warning: please use server.use-ipv6 only for hostnames, not without server.bind / empty address; your config will break if the kernel default for IPV6_V6ONLY changes 
+1970-01-01 00:01:03: (/space/build/ToT/factory/src/vood/ng/current/lighttpd/src/log.c.164) server started 
+Using interface wlan0 with hwaddr 00:02:61:c2:8b:76 and ssid "bahnhof2_4Ghz-159273"
+WPS: Converting push_button to virtual_push_button for WPS 2.0 compliance
+[4294731626] mtlk0(_mtlk_core_mbss_is_rescan_exempted:2758): Re-Scan cannot be exempted (20/40 is active)
+[4294731626] mtlk0(mtlk_mbss_init:3439): CID-0000: _mtlk_core_mbss_check_activation_params returned successfully
+[4294731636] mtlk0(_mtlk_mbss_preactivate:2917): CID-0000: Pre-activation configured parameters:
+[4294731646] mtlk0(mtlk_core_configuration_dump:4938): CID-0000: Country             : SE
+[4294731656] mtlk0(mtlk_core_configuration_dump:4939): CID-0000: Domain              : 48
+[4294731666] mtlk0(mtlk_core_configuration_dump:4940): CID-0000: Network mode        : 802.11bgn
+[4294731676] mtlk0(mtlk_core_configuration_dump:4941): CID-0000: Band                : 2.4
+[4294731686] mtlk0(mtlk_core_configuration_dump:4942): CID-0000: Prog Model Spectrum : 40 MHz
+[4294731686] mtlk0(mtlk_core_configuration_dump:4943): CID-0000: Selected Spectrum   : 40 MHz
+[4294731696] mtlk0(mtlk_core_configuration_dump:4944): CID-0000: User Sel. Spectrum  : 40 MHz
+[4294731706] mtlk0(mtlk_core_configuration_dump:4945): CID-0000: Bonding             : lower
+[4294731716] mtlk0(mtlk_core_configuration_dump:4946): CID-0000: HT mode             : enabled
+[4294731726] mtlk0(mtlk_core_configuration_dump:4948): CID-0000: SM enabled          : enabled
+[4294731726] mtlk0(mtlk_aocs_set_config_frequency_band:3162): Overriding AOCS type for 2.4 GHz (NONE)
+[4294731736] mtlk0(_mtlk_mbss_preactivate:2932): CID-0000: Start AOCS
+[4294731746] mtlk0(_mtlk_mbss_preactivate:2945): CID-0000: ap_scan_band_cfg = 1
+[4294731756] mtlk0(_mtlk_core_perform_initial_scan:2701): CID-0000: Scan started 40MHz
+[4294731756] mtlk0(do_scan:596): Starting normal scan...
+mtlk mtlk.0: firmware: requesting ProgModel_BG_CB_ar10.bin
+mtlk mtlk.0: firmware: requesting ProgModel_BG_CB_40_RevI_ar10.bin
+[4294732066] mtlk0(prepare_progmodel_string:2061): CID-0000: ProgModel: ProgModel_BG_CB_40_RevI_ar10.bin version 2025
+
+[4294734036] mtlk0(_mtlk_core_perform_initial_scan:2701): CID-0000: Scan started 20MHz
+[4294734036] mtlk0(do_scan:596): Starting normal scan...
+mtlk mtlk.0: firmware: requesting ProgModel_BG_nCB_ar10.bin
+mtlk mtlk.0: firmware: requesting ProgModel_BG_nCB_40_RevI_ar10.bin
+[4294734216] mtlk0(prepare_progmodel_string:2061): CID-0000: ProgModel: ProgModel_BG_nCB_40_RevI_ar10.bin version 2025
+
+[4294737176] mtlk<3>(_aocs_is_non_wifi_noise:3594): Force to 20 MHz mode due to interferer detection: ch:1 load:58 thrsh:15
+[4294737186] mtlk<4>(aocs_detect_non_wifi_noise:3638): Coexistance switching to 20MHz Mode
+[4294737186] mtlk0(_mtlk_core_aocs_on_spectrum_change:2879): CID-0000: Spectrum changed to 20MHz
+[4294737196] mtlk0(_mtlk_mbss_preactivate:3040): CID-0000: Pre-activation selected parameters:
+[4294737206] mtlk0(mtlk_core_configuration_dump:4938): CID-0000: Country             : SE
+[4294737216] mtlk0(mtlk_core_configuration_dump:4939): CID-0000: Domain              : 48
+[4294737226] mtlk0(mtlk_core_configuration_dump:4940): CID-0000: Network mode        : 802.11bgn
+[4294737226] mtlk0(mtlk_core_configuration_dump:4941): CID-0000: Band                : 2.4
+[4294737236] mtlk0(mtlk_core_configuration_dump:4942): CID-0000: Prog Model Spectrum : 20 MHz
+[4294737246] mtlk0(mtlk_core_configuration_dump:4943): CID-0000: Selected Spectrum   : 20 MHz
+[4294737256] mtlk0(mtlk_core_configuration_dump:4944): CID-0000: User Sel. Spectrum  : 40 MHz
+[4294737266] mtlk0(mtlk_core_configuration_dump:4945): CID-0000: Bonding             : lower
+[4294737266] mtlk0(mtlk_core_configuration_dump:4946): CID-0000: HT mode             : enabled
+[4294737276] mtlk0(mtlk_core_configuration_dump:4948): CID-0000: SM enabled          : enabled
+[4294737296] mtlk0(_mtlk_channels_frequency_element_dump:3086): CID-0000: Channel        : 13
+[4294737296] mtlk0(_mtlk_channels_frequency_element_dump:3087): CID-0000: ChannelACT     : 0
+[4294737306] mtlk0(_mtlk_channels_frequency_element_dump:3088): CID-0000: ScanType       : 0
+[4294737316] mtlk0(_mtlk_channels_frequency_element_dump:3089): CID-0000: ChannelSwCnt   : 0
+[4294737326] mtlk0(_mtlk_channels_frequency_element_dump:3090): CID-0000: SwitchMode     : 0
+[4294737326] mtlk0(_mtlk_channels_frequency_element_dump:3091): CID-0000: SmRequired     : 0
+[4294737336] mtlk0(_mtlk_channels_frequency_element_dump:3092): CID-0000: CbTxPowerLim   : 104
+[4294737346] mtlk0(_mtlk_channels_frequency_element_dump:3093): CID-0000: nCbTxPowerLim  : 104
+[4294737356] mtlk0(_mtlk_channels_frequency_element_dump:3094): CID-0000: AntennaGain    : 0
+[4294737366] mtlk0(_mtlk_channels_frequency_element_dump:3095): CID-0000: ChannelLoad    : 0
+[4294737376] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[0]    : 0
+[4294737376] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[0] : 0
+[4294737386] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[1]    : 0
+[4294737396] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[1] : 0
+[4294737406] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[2]    : 0
+[4294737416] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[2] : 0
+[4294737416] mtlk0(_mtlk_channels_frequency_element_dump:3100): CID-0000: SwitchType     : 0
+[4294737426] mtlk0(_mtlk_mbss_send_preactivate_req:2829): CID-0000: Sending UMI FW Preactivation
+[4294737506] mtlk<3>(mtlk_core_set_force_ncb:6653): CID-0000: Error returned for UMI_FORCE_NCB request to MAC (err=2)
+[4294737516] mtlk0(_mtlk_mbss_preactivate:3070): CID-0000: _mtlk_mbss_preactivate returned successfully
+[4294737526] mtlk0(mtlk_mbss_init:3446): CID-0000: _mtlk_mbss_preactivate_if_needed returned successfully
+[4294737536] mtlk0(mtlk_mbss_send_vap_activate:3134): CID-0000: Entering mtlk_mbss_send_vap_activate
+[4294737536] mtlk0(mtlk_mbss_send_vap_activate:3141): CID-0000: Start activation
+[4294737546] mtlk0(__mtlk_dump:66): dump of UMI_ACTIVATE_VAP:
+cp= 0x863b2230 l=152
+0000:  00 02 61 c2 8b 76 00 00  02 00 00 05 00 0f 00 00 
+0010:  aa 0f 00 00 55 00 00 00  ff ff ff ff 14 00 00 00 
+0020:  62 61 68 6e 68 6f 66 32  5f 34 47 68 7a 2d 31 35 
+0030:  39 32 37 33 00 00 00 00  00 00 00 00 00 00 00 00 
+0040:  00 00 00 00 30 18 01 00  00 0f ac 02 02 00 00 0f 
+0050:  ac 04 00 0f ac 02 01 00  00 0f ac 02 00 00 00 00 
+0060:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0070:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0080:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0090:  00 00 00 00 09 00 00 00  
+[4294737606] mtlk0(mtlk_mbss_send_vap_activate:3203): CID-0000: UMI_ACTIVATE_VAP
+[4294737606] mtlk0(mtlk_mbss_send_vap_activate:3204): CID-0000: 	sBSSID = 00:02:61:C2:8B:76
+[4294737616] mtlk0(mtlk_mbss_send_vap_activate:3205): CID-0000: 	sSSID = bahnhof2_4Ghz-159273
+[4294737626] mtlk0(mtlk_mbss_send_vap_activate:3206): CID-0000: 	Hidden = 0
+[4294737636] mtlk0(__mtlk_dump:66): 	sRSNie = 
+cp= 0x863b2274 l=80
+0000:  30 18 01 00 00 0f ac 02  02 00 00 0f ac 04 00 0f 
+0010:  ac 02 01 00 00 0f ac 02  00 00 00 00 00 00 00 00 
+0020:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0030:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0040:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+[4294737666] mtlk0(mtlk_mbss_send_vap_activate:3210): CID-0000: mtlk_txmm_msg_send, MsgId = 0x453, ESSID = bahnhof2_4Ghz-159273
+[4294737686] mtlk0(mtlk_mbss_init:3453): CID-0000: mtlk_mbss_send_vap_activate returned successfully
+Received SIGTERM
+Configuration file: /tmp/hostapd-wlan0.conf
+Using interface wlan0 with hwaddr 00:02:61:c2:8b:76 and ssid "bahnhof2_4Ghz-159273"
+udhcpd (v1.21.1) started
+WPS: Converting push_button to virtual_push_button fo[4294742186] mtlk0(_mtlk_core_mbss_is_rescan_exempted:2758): Re-Scan cannot be exempted (20/40 is active)
+[4294742196] mtlk0(mtlk_mbss_init:3439): CID-0000: _mtlk_core_mbss_check_activation_params returned successfully
+[4294742206] mtlk0(_mtlk_mbss_preactivate:2917): CID-0000: Pre-activation configured parameters:
+[4294742216] mtlk0(mtlk_core_configuration_dump:4938): CID-0000: Country             : SE
+[4294742226] mtlk0(mtlk_core_configuration_dump:4939): CID-0000: Domain              : 48
+[4294742236] mtlk0(mtlk_core_configuration_dump:4940): CID-0000: Network mode        : 802.11bgn
+[4294742236] mtlk0(mtlk_core_configuration_dump:4941): CID-0000: Band                : 2.4
+[4294742246] mtlk0(mtlk_core_configuration_dump:4942): CID-0000: Prog Model Spectrum : 20 MHz
+[4294742256] mtlk0(mtlk_core_configuration_dump:4943): CID-0000: Selected Spectrum   : 40 MHz
+[4294742266] mtlk0(mtlk_core_configuration_dump:4944): CID-0000: User Sel. Spectrum  : 40 MHz
+[4294742276] mtlk0(mtlk_core_configuration_dump:4945): CID-0000: Bonding             : lower
+[4294742286] mtlk0(mtlk_core_configuration_dump:4946): CID-0000: HT mode             : enabled
+[4294742286] mtlk0(mtlk_core_configuration_dump:4948): CID-0000: SM enabled          : enabled
+[4294742296] mtlk0(mtlk_aocs_set_config_frequency_band:3162): Overriding AOCS type for 2.4 GHz (NONE)
+[4294742306] mtlk0(_mtlk_mbss_preactivate:2932): CID-0000: Start AOCS
+[4294742316] mtlk0(_mtlk_mbss_preactivate:2945): CID-0000: ap_scan_band_cfg = 1
+[4294742316] mtlk0(_mtlk_core_perform_initial_scan:2701): CID-0000: Scan started 40MHz
+[4294742326] mtlk0(do_scan:596): Starting normal scan...
+mtlk mtlk.0: firmware: requesting ProgModel_BG_CB_ar10.bin
+r WPS 2.0 compliance
+mtlk mtlk.0: firmware: requesting ProgModel_BG_CB_40_RevI_ar10.bin
+[4294742726] mtlk0(prepare_progmodel_string:2061): CID-0000: ProgModel: ProgModel_BG_CB_40_RevI_ar10.bin version 2025
+
+[4294744416] mtlk0(_mtlk_core_perform_initial_scan:2701): CID-0000: Scan started 20MHz
+[4294744426] mtlk0(do_scan:596): Starting normal scan...
+mtlk mtlk.0: firmware: requesting ProgModel_BG_nCB_ar10.bin
+mtlk mtlk.0: firmware: requesting ProgModel_BG_nCB_40_RevI_ar10.bin
+[4294744606] mtlk0(prepare_progmodel_string:2061): CID-0000: ProgModel: ProgModel_BG_nCB_40_RevI_ar10.bin version 2025
+
+[4294746486] mtlk<3>(_aocs_is_non_wifi_noise:3594): Force to 20 MHz mode due to interferer detection: ch:1 load:33 thrsh:15
+[4294746496] mtlk<4>(aocs_detect_non_wifi_noise:3638): Coexistance switching to 20MHz Mode
+[4294746496] mtlk0(_mtlk_core_aocs_on_spectrum_change:2879): CID-0000: Spectrum changed to 20MHz
+[4294746506] mtlk0(_mtlk_mbss_preactivate:3040): CID-0000: Pre-activation selected parameters:
+[4294746516] mtlk0(mtlk_core_configuration_dump:4938): CID-0000: Country             : SE
+[4294746526] mtlk0(mtlk_core_configuration_dump:4939): CID-0000: Domain              : 48
+[4294746536] mtlk0(mtlk_core_configuration_dump:4940): CID-0000: Network mode        : 802.11bgn
+[4294746536] mtlk0(mtlk_core_configuration_dump:4941): CID-0000: Band                : 2.4
+[4294746546] mtlk0(mtlk_core_configuration_dump:4942): CID-0000: Prog Model Spectrum : 20 MHz
+[4294746556] mtlk0(mtlk_core_configuration_dump:4943): CID-0000: Selected Spectrum   : 20 MHz
+[4294746566] mtlk0(mtlk_core_configuration_dump:4944): CID-0000: User Sel. Spectrum  : 40 MHz
+[4294746576] mtlk0(mtlk_core_configuration_dump:4945): CID-0000: Bonding             : lower
+[4294746586] mtlk0(mtlk_core_configuration_dump:4946): CID-0000: HT mode             : enabled
+[4294746586] mtlk0(mtlk_core_configuration_dump:4948): CID-0000: SM enabled          : enabled
+[4294746606] mtlk0(_mtlk_channels_frequency_element_dump:3086): CID-0000: Channel        : 13
+[4294746606] mtlk0(_mtlk_channels_frequency_element_dump:3087): CID-0000: ChannelACT     : 0
+[4294746616] mtlk0(_mtlk_channels_frequency_element_dump:3088): CID-0000: ScanType       : 0
+[4294746626] mtlk0(_mtlk_channels_frequency_element_dump:3089): CID-0000: ChannelSwCnt   : 0
+[4294746636] mtlk0(_mtlk_channels_frequency_element_dump:3090): CID-0000: SwitchMode     : 0
+[4294746646] mtlk0(_mtlk_channels_frequency_element_dump:3091): CID-0000: SmRequired     : 0
+[4294746646] mtlk0(_mtlk_channels_frequency_element_dump:3092): CID-0000: CbTxPowerLim   : 104
+[4294746656] mtlk0(_mtlk_channels_frequency_element_dump:3093): CID-0000: nCbTxPowerLim  : 104
+[4294746666] mtlk0(_mtlk_channels_frequency_element_dump:3094): CID-0000: AntennaGain    : 0
+[4294746676] mtlk0(_mtlk_channels_frequency_element_dump:3095): CID-0000: ChannelLoad    : 0
+[4294746686] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[0]    : 0
+[4294746686] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[0] : 0
+[4294746696] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[1]    : 0
+[4294746706] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[1] : 0
+[4294746716] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[2]    : 0
+[4294746726] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[2] : 0
+[4294746736] mtlk0(_mtlk_channels_frequency_element_dump:3100): CID-0000: SwitchType     : 0
+[4294746736] mtlk0(_mtlk_mbss_send_preactivate_req:2829): CID-0000: Sending UMI FW Preactivation
+[4294746816] mtlk<3>(mtlk_core_set_force_ncb:6653): CID-0000: Error returned for UMI_FORCE_NCB request to MAC (err=2)
+[4294746826] mtlk0(_mtlk_mbss_preactivate:3070): CID-0000: _mtlk_mbss_preactivate returned successfully
+[4294746836] mtlk0(mtlk_mbss_init:3446): CID-0000: _mtlk_mbss_preactivate_if_needed returned successfully
+[4294746846] mtlk0(mtlk_mbss_send_vap_activate:3134): CID-0000: Entering mtlk_mbss_send_vap_activate
+[4294746846] mtlk0(mtlk_mbss_send_vap_activate:3141): CID-0000: Start activation
+[4294746856] mtlk0(__mtlk_dump:66): dump of UMI_ACTIVATE_VAP:
+cp= 0x863b320c l=152
+0000:  00 02 61 c2 8b 76 00 00  02 00 00 05 00 0f 00 00 
+0010:  aa 0f 00 00 55 00 00 00  ff ff ff ff 14 00 00 00 
+0020:  62 61 68 6e 68 6f 66 32  5f 34 47 68 7a 2d 31 35 
+0030:  39 32 37 33 00 00 00 00  00 00 00 00 00 00 00 00 
+0040:  00 00 00 00 30 18 01 00  00 0f ac 02 02 00 00 0f 
+0050:  ac 04 00 0f ac 02 01 00  00 0f ac 02 00 00 00 00 
+0060:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0070:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0080:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0090:  00 00 00 00 09 00 00 00  
+[4294746916] mtlk0(mtlk_mbss_send_vap_activate:3203): CID-0000: UMI_ACTIVATE_VAP
+[4294746916] mtlk0(mtlk_mbss_send_vap_activate:3204): CID-0000: 	sBSSID = 00:02:61:C2:8B:76
+[4294746926] mtlk0(mtlk_mbss_send_vap_activate:3205): CID-0000: 	sSSID = bahnhof2_4Ghz-159273
+[4294746936] mtlk0(mtlk_mbss_send_vap_activate:3206): CID-0000: 	Hidden = 0
+[4294746946] mtlk0(__mtlk_dump:66): 	sRSNie = 
+cp= 0x863b3250 l=80
+0000:  30 18 01 00 00 0f ac 02  02 00 00 0f ac 04 00 0f 
+0010:  ac 02 01 00 00 0f ac 02  00 00 00 00 00 00 00 00 
+0020:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0030:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0040:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+[4294746976] mtlk0(mtlk_mbss_send_vap_activate:3210): CID-0000: mtlk_txmm_msg_send, MsgId = 0x453, ESSID = bahnhof2_4Ghz-159273
+[4294746996] mtlk0(mtlk_mbss_init:3453): CID-0000: mtlk_mbss_send_vap_activate returned successfully
+TAPI, Version 4.10.4.2, (c) 2001-2013 Lantiq Deutschland GmbH
+Lantiq MIPS34KEc MPS driver, version 2.2.7.0, (c) 2006-2010 Lantiq Deutschland GmbH
+Lantiq VMMC device driver, version 1.15.0.4, (c) 2006-2013 Lantiq Deutschland GmbH
+bkos: hal received command 2
+CRM is considered alive and well - removing threat limit
+
+# 

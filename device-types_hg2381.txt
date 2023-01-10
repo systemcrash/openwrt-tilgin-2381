@@ -1,0 +1,18 @@
+# ls dev/
+X0R                log                rtsp_dev           vc
+button             loop0              sip_conn_dev       vcc
+caldata            loop1              sip_dev            vmmc10
+capi20             loop2              switch_api         vmmc11
+console            loop3              systty             vmmc12
+crypto             mem                tantos             vmmc13
+cua0               mtd                timer_drv          vmmc14
+cua1               mtdblock           tty                vmmc15
+dect_drv           net                tty0               vmmc16
+dk0                null               tty1               vmmc17
+dk1                ppp                ttyS0              vmmc18
+i2c-0              ptmx               ttyS1              voip_timer_driver
+i2c-1              pts                ubi0               watchdog
+ifx_ppa            ram0               ubi0_0             zero
+igmp               ramdisk            ubi0_3
+input              random             urandom
+led                rtsp_conn_dev      usb

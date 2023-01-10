@@ -1,0 +1,107 @@
+# ubinfo -a
+UBI version:                    1
+Count of UBI devices:           1
+UBI control device major/minor: 10:62
+Present UBI devices:            ubi0
+
+ubi0
+Volumes count:                           10
+Logical eraseblock size:                 129024 bytes, 126.0 KiB
+Total amount of logical eraseblocks:     1020 (131604480 bytes, 125.5 MiB)
+Amount of available logical eraseblocks: 848 (109412352 bytes, 104.3 MiB)
+Maximum count of volumes                 128
+Count of bad physical eraseblocks:       0
+Count of reserved physical eraseblocks:  10
+Current maximum erase counter value:     257
+Minimum input/output unit size:          2048 bytes
+Character device major/minor:            252:0
+Present volumes:                         1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+Volume ID:   1 (on ubi0)
+Type:        static
+Alignment:   1
+Size:        1 LEBs (129024 bytes, 126.0 KiB)
+Data bytes:  4096 bytes (4.0 KiB)
+State:       OK
+Name:        Config-C
+Character device major/minor: 252:2
+-----------------------------------
+Volume ID:   2 (on ubi0)
+Type:        static
+Alignment:   1
+Size:        1 LEBs (129024 bytes, 126.0 KiB)
+Data bytes:  24576 bytes (24.0 KiB)
+State:       OK
+Name:        Config-A
+Character device major/minor: 252:3
+-----------------------------------
+Volume ID:   3 (on ubi0)
+Type:        static
+Alignment:   1
+Size:        1 LEBs (129024 bytes, 126.0 KiB)
+Data bytes:  24576 bytes (24.0 KiB)
+State:       OK
+Name:        Log
+Character device major/minor: 252:4
+-----------------------------------
+Volume ID:   4 (on ubi0)
+Type:        static
+Alignment:   1
+Size:        1 LEBs (129024 bytes, 126.0 KiB)
+Data bytes:  7936 bytes (7.8 KiB)
+State:       OK
+Name:        Environment
+Character device major/minor: 252:5
+-----------------------------------
+Volume ID:   5 (on ubi0)
+Type:        static
+Alignment:   1
+Size:        1 LEBs (129024 bytes, 126.0 KiB)
+Data bytes:  4096 bytes (4.0 KiB)
+State:       OK
+Name:        Misc-A
+Character device major/minor: 252:6
+-----------------------------------
+Volume ID:   6 (on ubi0)
+Type:        static
+Alignment:   1
+Size:        11 LEBs (1419264 bytes, 1.4 MiB)
+Data bytes:  1407723 bytes (1.3 MiB)
+State:       OK
+Name:        kernel
+Character device major/minor: 252:7
+-----------------------------------
+Volume ID:   7 (on ubi0)
+Type:        static
+Alignment:   1
+Size:        139 LEBs (17934336 bytes, 17.1 MiB)
+Data bytes:  17899520 bytes (17.1 MiB)
+State:       OK
+Name:        rootfs
+Character device major/minor: 252:8
+-----------------------------------
+Volume ID:   8 (on ubi0)
+Type:        static
+Alignment:   1
+Size:        1 LEBs (129024 bytes, 126.0 KiB)
+Data bytes:  4096 bytes (4.0 KiB)
+State:       OK
+Name:        appfs
+Character device major/minor: 252:9
+-----------------------------------
+Volume ID:   9 (on ubi0)
+Type:        dynamic
+Alignment:   1
+Size:        1 LEBs (129024 bytes, 126.0 KiB)
+State:       OK
+Name:        caldata
+Character device major/minor: 252:10
+-----------------------------------
+Volume ID:   10 (on ubi0)
+Type:        static
+Alignment:   1
+Size:        1 LEBs (129024 bytes, 126.0 KiB)
+Data bytes:  169 bytes
+State:       OK
+Name:        test_data
+Character device major/minor: 252:11

@@ -1,0 +1,353 @@
+GRX330 # ubi info l
+
+UBI: volume information dump:
+UBI: vol_id          2147479551
+UBI: reserved_pebs   2
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        3
+UBI: name_len        13
+UBI: usable_leb_size 129024
+UBI: used_ebs        2
+UBI: used_bytes      258048
+UBI: last_eb_bytes   2
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            layout volume
+
+
+
+GRX330 # ubi info
+
+UBI: MTD device name:            "ubi"
+UBI: MTD device size:            127 MiB
+UBI: physical eraseblock size:   131072 bytes (128 KiB)
+UBI: logical eraseblock size:    129024 bytes
+UBI: number of good PEBs:        1020
+UBI: number of bad PEBs:         0
+UBI: smallest flash I/O unit:    2048
+UBI: VID header offset:          512 (aligned 512)
+UBI: data offset:                2048
+UBI: max. allowed volumes:       128
+UBI: wear-leveling threshold:    256
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     10
+UBI: available PEBs:             848
+UBI: total number of reserved PEBs: 172
+UBI: number of PEBs reserved for bad PEB handling: 10
+UBI: max/mean erase counter: 257/2
+GRX330 # 
+
+
+GRX330 # ubi info layout
+
+UBI: volume information dump:
+UBI: vol_id          1
+UBI: reserved_pebs   1
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        4
+UBI: name_len        8
+UBI: usable_leb_size 129024
+UBI: used_ebs        1
+UBI: used_bytes      4096
+UBI: last_eb_bytes   4096
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            Config-C
+
+UBI: volume information dump:
+UBI: vol_id          2
+UBI: reserved_pebs   1
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        4
+UBI: name_len        8
+UBI: usable_leb_size 129024
+UBI: used_ebs        1
+UBI: used_bytes      24576
+UBI: last_eb_bytes   24576
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            Config-A
+
+UBI: volume information dump:
+UBI: vol_id          3
+UBI: reserved_pebs   1
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        4
+UBI: name_len        3
+UBI: usable_leb_size 129024
+UBI: used_ebs        1
+UBI: used_bytes      24576
+UBI: last_eb_bytes   24576
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            Log
+
+UBI: volume information dump:
+UBI: vol_id          4
+UBI: reserved_pebs   1
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        4
+UBI: name_len        11
+UBI: usable_leb_size 129024
+UBI: used_ebs        1
+UBI: used_bytes      7936
+UBI: last_eb_bytes   7936
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            Environment
+
+UBI: volume information dump:
+UBI: vol_id          5
+UBI: reserved_pebs   1
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        4
+UBI: name_len        6
+UBI: usable_leb_size 129024
+UBI: used_ebs        1
+UBI: used_bytes      4096
+UBI: last_eb_bytes   4096
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            Misc-A
+
+UBI: volume information dump:
+UBI: vol_id          6
+UBI: reserved_pebs   11
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        4
+UBI: name_len        6
+UBI: usable_leb_size 129024
+UBI: used_ebs        11
+UBI: used_bytes      1407723
+UBI: last_eb_bytes   117483
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            kernel
+
+UBI: volume information dump:
+UBI: vol_id          7
+UBI: reserved_pebs   139
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        4
+UBI: name_len        6
+UBI: usable_leb_size 129024
+UBI: used_ebs        139
+UBI: used_bytes      17899520
+UBI: last_eb_bytes   94208
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            rootfs
+
+UBI: volume information dump:
+UBI: vol_id          8
+UBI: reserved_pebs   1
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        4
+UBI: name_len        5
+UBI: usable_leb_size 129024
+UBI: used_ebs        1
+UBI: used_bytes      4096
+UBI: last_eb_bytes   4096
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            appfs
+
+UBI: volume information dump:
+UBI: vol_id          9
+UBI: reserved_pebs   1
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        3
+UBI: name_len        7
+UBI: usable_leb_size 129024
+UBI: used_ebs        1
+UBI: used_bytes      129024
+UBI: last_eb_bytes   129024
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            caldata
+
+UBI: volume information dump:
+UBI: vol_id          10
+UBI: reserved_pebs   1
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        4
+UBI: name_len        9
+UBI: usable_leb_size 129024
+UBI: used_ebs        1
+UBI: used_bytes      169
+UBI: last_eb_bytes   169
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            test_data
+
+UBI: volume information dump:
+UBI: vol_id          2147479551
+UBI: reserved_pebs   2
+UBI: alignment       1
+UBI: data_pad        0
+UBI: vol_type        3
+UBI: name_len        13
+UBI: usable_leb_size 129024
+UBI: used_ebs        2
+UBI: used_bytes      258048
+UBI: last_eb_bytes   2
+UBI: corrupted       0
+UBI: upd_marker      0
+UBI: name            layout volume
+
+=========
+
+# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00080000 00020000 "U-Boot"
+mtd1: 07f80000 00020000 "ubi"
+mtd2: 00001000 0001f800 "Config-C"
+mtd3: 00006000 0001f800 "Config-A"
+mtd4: 00006000 0001f800 "Log"
+mtd5: 00001f00 0001f800 "Environment"
+mtd6: 00001000 0001f800 "Misc-A"
+mtd7: 00157aeb 0001f800 "kernel"
+mtd8: 01112000 0001f800 "rootfs"
+mtd9: 00001000 0001f800 "appfs"
+mtd10: 0001f800 0001f800 "caldata"
+mtd11: 000000a9 0001f800 "test_data"
+#
+
+=========
+
+# mtd_debug info /dev/mtd/0
+mtd.type = MTD_NANDFLASH
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 524288 (512K)
+mtd.erasesize = 131072 (128K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 64
+regions = 0
+
+# mtd_debug info /dev/mtd/1
+mtd.type = MTD_NANDFLASH
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 133693440 (127M)
+mtd.erasesize = 131072 (128K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 64
+regions = 0
+
+# mtd_debug info /dev/mtd/2
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 4096 (4K)
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+# mtd_debug info /dev/mtd/3
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 24576 (24K)
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+# mtd_debug info /dev/mtd/4
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 24576 (24K)
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+# mtd_debug info /dev/mtd/5
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 7936 (7K)
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+# mtd_debug info /dev/mtd/6
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 4096 (4K)
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+# mtd_debug info /dev/mtd/7
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 1407723 (1M)
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+# mtd_debug info /dev/mtd/8
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 17899520 (17M)
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+# mtd_debug info /dev/mtd/9
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 4096 (4K)
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+# mtd_debug info /dev/mtd/10
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 129024 (126K)
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+# mtd_debug info /dev/mtd/11
+mtd.type = MTD_UBIVOLUME(unknown type - new MTD API maybe?)
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 169
+mtd.erasesize = 129024 (126K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 0
+regions = 0
+
+
+=============
+
+# ubinfo /dev/ubi0
+ubi0
+Volumes count:                           10
+Logical eraseblock size:                 129024 bytes, 126.0 KiB
+Total amount of logical eraseblocks:     1020 (131604480 bytes, 125.5 MiB)
+Amount of available logical eraseblocks: 848 (109412352 bytes, 104.3 MiB)
+Maximum count of volumes                 128
+Count of bad physical eraseblocks:       0
+Count of reserved physical eraseblocks:  10
+Current maximum erase counter value:     257
+Minimum input/output unit size:          2048 bytes
+Character device major/minor:            252:0
+Present volumes:                         1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+#
