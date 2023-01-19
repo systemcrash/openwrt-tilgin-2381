@@ -9,7 +9,7 @@ for Tilgin 2381 (and by all indications 238x).
 
 To extract it:
 ```bash
-tar -xf 13782324_ES5000_HG2380_02_07_03_48.bin`
+tar -xf 13782324_ES5000_HG2380_02_07_03_48.bin
 ```
 
 Inside are the UBI images, including:

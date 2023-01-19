@@ -1,0 +1,14 @@
+# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00080000 00020000 "U-Boot"
+mtd1: 07f80000 00020000 "ubi"
+mtd2: 000000a9 0001f800 "test_data"
+mtd3: 00008000 0001f800 "Config-A"
+mtd5: 00001f00 0001f800 "Environment"
+mtd6: 00001000 0001f800 "Misc-A"
+mtd7: 001b9000 0001f800 "kernel"
+mtd8: 017bf800 0001f800 "rootfs"
+mtd9: 0001f800 0001f800 "appfs"
+mtd10: 0001f800 0001f800 "caldata"
+mtd11: 00002000 0001f800 "Config-C"
+mtd12: 00009000 0001f800 "Log"
