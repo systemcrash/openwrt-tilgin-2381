@@ -134,6 +134,14 @@ The 2384 has 7 multicolour LEDs on the front panel, from left to right:
 * Telephone
 * DECT
 
+The 2384 PCB has two push buttons. 
+* "reset" (S2) 
+* "wifi" (S4)
+* "calling?" (S3)
+
+There are calling icon ![call](https://github.com/systemcrash/lede-tilgin-2381/raw/master/img/calling.jpg) on the case of the button.I am have not idea what mean assueming that is mean calling.
+
+
 ### HG2381
 
 The 2381 bootlog reveals:
