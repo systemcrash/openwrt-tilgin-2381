@@ -1,0 +1,151 @@
+GRX330 # printenv
+bootcmd=run flash_flash
+bootdelay=1
+baudrate=115200
+preboot=echo;echo Type "run flash_flash" to start the Linux kernel;echo;
+loadaddr=0x80500000
+mtdparts=mtdparts=ifx_nand:0x80000@0x0(U-Boot),-@0x80000(ubi)
+ubi_device=ubi
+kernel_vol=new.kernel
+rootfs_vol=new.rootfs
+appfs_vol=new.appfs
+ipaddr=192.168.1.1
+netdev=eth0
+serverip=192.168.1.3
+default_console=ttyS0
+loglevel=7
+bootfile=uImage
+rootfs=rootfs.img
+appfs=appfs.img
+kernel_addr=80500000
+root_mtdblock=mtd:rootfs
+addip=setenv bootargs $(bootargs) ip=$(ipaddr):$(serverip):$(gatewayip):$(netmask):$(hostname):$(netdev):on
+add_vood_ng=setenv bootargs $(bootargs) $(slram) $(mem_used) UBOOT_VERSION="02_10_00_87" UBOOT_DATETIME="Feb 21 2017 - 09:48:40" RESET_CAUSE=$(reset_cause) boot_cond=$(boot_cond)
+flashargs=setenv bootargs $(mtdparts) ubi.mtd=$(ubi_device) root=$(root_mtdblock)
+flash_flash=ubi_sw_update;run flashargs addip addmisc add_vood_ng;ubi read $(kernel_addr) kernel;bootm $(kernel_addr)
+run2core=echo TODO;run flash_flash
+prepare_update=ubi_sw_update;ubi remove old.kernel;ubi remove old.rootfs;ubi remove old.appfs
+update_kernel=run prepare_update do_update_kernel
+update_rootfs=run prepare_update do_update_rootfs
+update_appfs=run prepare_update do_update_appfs
+do_update_kernel=tftpboot $(loadaddr) $(bootfile);upgrade $(loadaddr) $(filesize)
+do_update_rootfs=tftpboot $(loadaddr) $(rootfs);upgrade $(loadaddr) $(filesize)
+do_update_appfs=tftpboot $(loadaddr) $(appfs);upgrade $(loadaddr) $(filesize)
+update=run prepare_update do_update_kernel do_update_rootfs do_update_appfs
+update_all=run update update_factory_config;reset
+uboot_ram_addr=0x80100000
+nand_spl=nand read 0xbe220200 0 0x4000;go 0xBE1A0000
+try_uboot=tftpboot $(uboot_ram_addr) uboot-ram.bin;go $(uboot_ram_addr)
+_preserve_uboot_data=echo
+update_uboot=mw.b $(loadaddr) ff 0x40000;tftpboot $(loadaddr) uboot-nand.bin;nand erase U-Boot;nand write $(loadaddr) U-Boot 0x40000
+update_uboot_env=tftpboot $(loadaddr) uboot-env.bin;ubi remove Environment;ubi create Environment $(filesize) s;ubi write $(loadaddr) Environment $(filesize)
+update_ubi=tftpboot $(loadaddr) ubi.img;nand erase ubi;nand write $(loadaddr) ubi $(filesize)
+update_flash=run update_uboot update_ubi;
+reset_config=ubi remove Config-A;ubi create Config-A 4 s
+update_factory_config=tftpboot $(loadaddr) config.img;ubi remove Config-C;ubi create Config-C $(filesize) s;ubi write $(loadaddr) Config-C $(filesize);run reset_config
+ub=run update flash_flash
+ukb=run update_kernel flash_flash
+urb=run update_rootfs flash_flash
+uab=run update_appfs flash_flash
+boot=run flash_flash
+net_kernel=run flashargs addip addmisc add_vood_ng;tftpboot $(kernel_addr) linux.kernel;bootm $(kernel_addr)
+addmtdram_rootfs=tftpboot $(loadaddr) $(rootfs);addmtdram rootfs-ram $(loadaddr) $(filesize)
+addmtdram_appfs=tftpboot $(loadaddr) $(appfs);addmtdram appfs-ram $(loadaddr) $(filesize)
+nb=run addmtdram_appfs addmtdram_rootfs net_kernel
+nrb=run addmtdram_rootfs net_kernel
+nab=run addmtdram_appfs net_kernel
+f_ddrconfig_addr=0x00003fe0
+f_ddrconfig_size=0x20
+reset_ddr_config=mw.b $(loadaddr) 0xff $(f_ddrconfig_size);nand write.partial $(loadaddr) $(f_ddrconfig_addr) $(f_ddrconfig_size)
+ID_Customer_PassPhrase=A9AR56FY
+ID_DECTEMC=223C
+ID_FLASHSZ=0x08000000
+ID_MAC_0=14:AE:DB:BB:CB:E0
+ID_MAC_1=14:AE:DB:BB:CB:E1
+ID_MAC_2=14:AE:DB:BB:CB:E2
+ID_MAC_3=14:AE:DB:BB:CB:E3
+ID_MAC_4=14:AE:DB:BB:CB:E4
+ID_MAC_5=14:AE:DB:BB:CB:E5
+ID_MAC_6=14:AE:DB:BB:CB:E6
+ID_MAC_7=14:AE:DB:BB:CB:E7
+ID_MEMSZ=0x08000000
+ID_OSC_TRIM=0069
+ID_PCBA_Rev=P03
+ID_PW1=WqtKJYs97Jh66AtdVxvkLzSFrSgWboce
+ID_PW2=9r5PvEQMAyx2rXPTfSJW5Pa6GzN2XPUo
+ID_PW3=wnGSAMUqCppCf6HWhVvifzb2MeXHqu3y
+ID_ProductFamily=HG2380
+ID_ProductID=HG2384
+ID_SSID=Tilgin-9ohAzV7gm3j2
+ID_SW_PM=03
+ID_SerialNumber=C4810052626
+ID_TX_B=cf
+ID_Vendor_ProductID=IAD601D
+addmisc=setenv bootargs $(bootargs) console=$(default_console),$(baudrate) ethaddr=$(ethaddr) ID_SerialNumber=$(ID_SerialNumber) ID_ProductID=$(ID_ProductID) ID_MAC_0=$(ID_MAC_0) ID_MAC_1=$(ID_MAC_1) ID_MAC_2=$(ID_MAC_2) ID_MAC_3=$(ID_MAC_3) ID_MAC_4=$(ID_MAC_4) ID_MAC_5=$(ID_MAC_5) ID_MAC_6=$(ID_MAC_6) ID_MAC_7=$(ID_MAC_7) panic=1 loglevel=$(loglevel)
+data_block0=uboot
+data_block1=ubi
+ethact=ar10 Switch
+f_ubi_addr=0xb0080000
+f_ubi_name=ubi
+f_ubi_size=0x7f80000
+f_uboot_addr=0xb0000000
+f_uboot_name=U-Boot
+f_uboot_size=0x80000
+flash_end=0xb8000000
+part0_begin=0xb0000000
+part1_begin=0xb0080000
+total_db=2
+total_part=2
+uboot_total_size=0x80000
+stdin=serial
+stdout=serial
+stderr=serial
+ver=U-Boot-2010.06-LANTIQ-v-2.3.115
+ethaddr=14:AE:DB:BB:CB:E0
+reset_cause=unknown
+boot_cond=0
+
+Environment size: 1392/7932 bytes
+GRX330 # help
+?       - alias for 'help'
+addmtdram- add MTD RAM partition
+base    - print or set address offset
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+chpart  - change active partition
+cmp     - memory compare
+cp      - memory copy
+crc32   - checksum calculation
+echo    - echo args to console
+go      - start application at address 'addr'
+help    - print command description/usage
+loadb   - load binary file over serial line (kermit mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+md      - memory display
+mm      - memory modify (auto-incrementing address)
+mtdparts- define flash/nand partitions
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nand    - NAND sub-system
+nboot   - boot from NAND device
+nm      - memory modify (constant address)
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+rarpboot- boot image via network using RARP/TFTP protocol
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+sqfsload- load file from a SquashFS filesystem image into memory
+sqfspl1 - check whether appfs contains the update for rootfs
+tftpboot- boot image via network using TFTP protocol
+ubi     - ubi commands
+ubi_sw_update- check UBI volumes for SW update renamings
+upgrade - forward/backward copy memory to pre-defined flash location
+version - print monitor version
+wdt     - start/stop a watchdog timer
+GRX330 # version
+
+Tilgin UBI HG228x/238x U-Boot 2010.06-LANTIQ-v-2.3.115 (Feb 21 2017 - 09:48:29) 02_10_00_87
+
