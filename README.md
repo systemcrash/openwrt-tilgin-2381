@@ -139,8 +139,7 @@ The 2384 PCB has two push buttons.
 * "wifi" (S4)
 * "calling?" (S3)
 
-There are calling icon ![call](https://github.com/systemcrash/lede-tilgin-2381/raw/master/img/calling.jpg) on the case of the button.I am have not idea what mean assueming that is mean calling.
-
+There is a calling icon ![call](img/calling.jpg) on the button at position S3.
 
 ### HG2381
 
